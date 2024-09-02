@@ -1,0 +1,88 @@
+.result-container{
+  background-color: hsl(202, 40%, 26%);
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  font-family:Plus Jakarta Sans, arial ;
+  
+
+  padding: 20px 30px 20px 30px; /* Add your desired padding */
+  box-sizing: border-box; /* Ensure padding doesn't affect width/height */
+
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 80px;
+}
+
+
+
+.results-title{
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.result-description ,
+.calculated-result-title,
+.total-title{
+  color: hsl(203, 41%, 72%);
+  font-size: 13px;
+  margin-bottom: 0px;
+}
+
+hr{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-color: hsl(200, 26%, 54%);
+}
+
+.calculated-result-container{
+  background-color: hsl(202, 55%, 16%);
+  margin-top: 30px;
+  padding: 20px 40px 20px 40px; /* Add your desired padding */
+  box-sizing: border-box; /* Ensure padding doesn't affect width/height */
+  border-radius: 10px;
+
+  box-shadow: 0px -3px 0px hsl(61, 70%, 52%) /* Ombre en bas */
+}
+
+.results{
+  color: hsl(61, 70%, 52%);
+  font-weight: 700;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.total{
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+
+/* empty result */
+
+.result-container-empty{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px 0px 20px;
+}
+
+.empty-title{
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 0px;
+  margin-top: 0;
+}
+
+.empty-text{
+  color: hsl(203, 41%, 72%);
+  font-size: 13px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: center;
+}

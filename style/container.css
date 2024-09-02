@@ -1,0 +1,77 @@
+.container {
+  background-color: rgb(255, 255, 255);
+  width: 850px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  flex-direction: row;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), /* Ombre en bas */
+              0px -4px 8px rgba(0, 0, 0, 0.2), /* Ombre en haut */
+              -4px 0px 8px rgba(0, 0, 0, 0.2), /* Ombre à gauche */
+              4px 0px 8px rgba(0, 0, 0, 0.2);  /* Ombre à droite */
+  
+}
+
+@media (max-width:600px){
+  .container{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    box-shadow: none;
+    background-color: red;
+  }
+
+  .calculator-container, .result-container {
+    width: 100%; /* Make the sections take up the full width */
+    height: auto; /* Adjust height based on content */
+    padding: 10px; /* Adjust padding */
+}
+
+/* Remove border radius for result container on mobile screens */
+    .result-container {
+        border-top-right-radius: 0 !important; /* Remove top-right border radius */
+        border-bottom-right-radius: 0 !important; /* Remove bottom-right border radius */
+        border-bottom-left-radius: 0 !important; /* Remove bottom-left border radius */
+        border-top-left-radius: 0 !important; /* Remove top-left border radius */
+    }
+    /* Remove border radius for calculator container on mobile screens */
+    .calculator-container {
+        border-top-left-radius: 0 !important; /* Remove top-left border radius */
+        border-bottom-left-radius: 0 !important; /* Remove bottom-left border radius */
+        border-top-right-radius: 0 !important; /* Remove top-right border radius */
+        border-bottom-right-radius: 0 !important; /* Remove bottom-right border radius */
+    }
+ 
+    /* adjusting calculator container*/
+
+    
+
+    .section1,
+    .section3{
+      flex-direction: column !important;
+      align-items: flex-start !important;
+    }
+
+    .calculator-title{
+      margin-bottom: 8px;
+    }
+
+    .clear-all-link{
+      margin-bottom: 10px;
+    }
+
+    .mortgage-term-section,
+    .interest-rate-section ,
+    .btn-calculate{
+        width: 100%; /* Make sure these sections take full width */
+    }
+
+
+
+
+  
+  
+}

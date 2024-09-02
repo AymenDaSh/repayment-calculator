@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style/container.css">
+  <link rel="stylesheet" href="style/general.css">
+  <link rel="stylesheet" href="style/calculator.css">
+  <link rel="stylesheet" href="style/result.css">
+
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<main>
+  <section>
+    <div class="container">
+      <div class="calculator-container">
+
+        <div class="section1">
+          <p class="calculator-title">Mortage Calculator</p>
+          <a class="clear-all-link js-clear-link">Clear All</a>
+        </div>
+
+        <div class="section2">
+          <p class="title-input">Mortgage Amount</p>
+          <div class="input-container">
+            <div class="currency">$</div>
+            <input class="mortgage-amount-input js-mortgage-amount-input" type="text">
+          </div>
+        </div>
+
+        <div class="section3">
+          <div class="mortgage-term-section">
+            <div class="input-term-title">Mortgage Term</div>
+            <div class="input-term-container">
+              <input class="mortgage-term-input js-mortgage-term-input">
+              <div class="years">years</div>
+            </div>
+            
+          </div>
+          <div class="interest-rate-section">
+            <div class="input-term-title">Interest Rate</div>
+            <div class="input-term-container">
+              <input class="mortgage-term-input js-mortgage-rate">
+              <div class="years">%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section4">
+          <div class="title-section4">Mortgage Type</div>
+          <label class="checkbox-container checkbox-repayments js-repayment">
+            <span class="checkmark checkmark-repayments"></span>
+            Repayments
+          </label>
+          <label class="checkbox-container checkbox-interest-only  js-interest-only">
+            <span class="checkmark checkmark-interest-only"></span>
+            Interest Only
+          </label>
+          <button class="btn-calculate js-btn">
+            <img class="btn-img" src="assets/images/icon-calculator.svg">
+            Calculate Repayments
+          </button>
+        </div>
+        
+        
+        
+      </div>
+
+      <div class="result-container result-container-empty"> 
+      </div>
+    </div>
+  </section>
+  
+
+</main>
+
+  
+  <script src="script/checkbox.js"></script>
+  <script src="script/calculate.js"></script>
+</body>
+</html>
