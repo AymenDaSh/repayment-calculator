@@ -31,10 +31,10 @@ function calculateRepayments() {
             </p>
             <div class="calculated-result-container">
               <p class="calculated-result-title">Your monthly repayments</p>
-              <p class="results">$${result}</p>
+              <p class="results">$${result.result}</p>
               <hr>
               <p class="total-title">Total you'll repay over the term</p>
-              <p class="total">$543,234.94</p>
+              <p class="total">$${result.totalInterestOnlyRepayment}</p>
             </div>
       `;
       resultContainerHTML.innerHTML = resultHTML;
@@ -79,22 +79,40 @@ function calculation(){
   const mortgageTerm = mortgageTermHTML.value;
   const mortgageRate = mortgageRateHTML.value;
   
-  //handling errors
-
-  errorHandling();
   
+  const principal = parseFloat(mortgageAmount);
+  const monthlyInterestRate = parseFloat(mortgageRate) / 100 / 12;
+  const numberOfPayments = parseFloat(mortgageTerm) * 12;
+
+  // Standard repayments 
+
+  let monthlyRepayment;
+  if (monthlyInterestRate === 0) {
+      monthlyRepayment = principal / numberOfPayments; // Handle 0% interest rate
+  } else {
+      monthlyRepayment = (principal * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)) /
+                          (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
+  } 
+
+  // Interest-Only Mortgage
+  const interestOnlyPayment = principal * monthlyInterestRate;
+
+  // Total you will repay over the term 
+  const totalInterestOnlyRepayment = interestOnlyPayment * numberOfPayments;
+
+  //return results depends on wich mortage type
 
   if(checkboxRepayment.classList.contains("checkmark-checked")){
-    // the formule is incorect just for testing
-    document.querySelector(".error-type").classList.remove("error-activated")
-    return (mortgageAmount + mortgageTerm) * mortgageRate;
+    return {result: monthlyRepayment.toFixed(2),
+            totalInterestOnlyRepayment: totalInterestOnlyRepayment.toFixed(2)
+
+    }
   }else if(checkboxInterestOnly.classList.contains("checkmark-checked")){
-    document.querySelector(".error-type").classList.remove("error-activated")
-    return 19223.34;
+    return {result:  interestOnlyPayment.toFixed(2),
+            totalInterestOnlyRepayment: totalInterestOnlyRepayment.toFixed(2)
+    }
   }
 }
-
-
 
 function errorHandling(){
   let hasError = false;
@@ -107,8 +125,11 @@ function errorHandling(){
 
   if(!checkboxRepayment.classList.contains("checkmark-checked") && 
      !checkboxInterestOnly.classList.contains("checkmark-checked")){
-   document.querySelector(".error-type").classList.add("error-activated")
+   document.querySelector(".error-type").classList.add("error-activated");
    hasError = true;
+  }else{
+    document.querySelector(".error-type").classList.remove("error-activated");
+    document.querySelector(".error-type").classList.remove("error-activated");
   }
 
   if(mortgageAmount === ''){
