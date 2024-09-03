@@ -52,7 +52,21 @@ document.querySelector(".js-clear-link").addEventListener("click", () => {
         </p>
   `;
   resultContainerHTML.innerHTML = resultHTML;
-  resultContainerHTML.classList.add("result-container-empty");    
+  resultContainerHTML.classList.add("result-container-empty");  
+  
+  document.querySelector(".error-type").classList.remove("error-activated")
+
+  mortgageAmountHTML.classList.remove("error-input");
+  document.querySelector(".currency").classList.remove("error-signe");
+  document.querySelector(".error-amount").classList.remove("error-activated");
+
+  mortgageTermHTML.classList.remove("error-input");
+  document.querySelector(".years").classList.remove("error-signe");
+  document.querySelector(".error-term").classList.remove("error-activated");
+
+  mortgageRateHTML.classList.remove("error-input");
+  document.querySelector(".rate").classList.remove("error-signe");
+  document.querySelector(".error-rate").classList.remove("error-activated");
 })
 }
 
