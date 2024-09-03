@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="style/general.css">
   <link rel="stylesheet" href="style/calculator.css">
   <link rel="stylesheet" href="style/result.css">
+  <link rel="stylesheet" href="style/error.css">
 
   <title>Frontend Mentor | Mortgage repayment calculator</title>
 
@@ -39,7 +40,7 @@
             <input class="mortgage-amount-input js-mortgage-amount-input" type="text">
           </div>
         </div>
-
+        <p class="error-amount" >This field is required</p>
         <div class="section3">
           <div class="mortgage-term-section">
             <div class="input-term-title">Mortgage Term</div>
@@ -47,14 +48,15 @@
               <input class="mortgage-term-input js-mortgage-term-input">
               <div class="years">years</div>
             </div>
-            
+            <p class="error-term" >This field is required</p>
           </div>
           <div class="interest-rate-section">
             <div class="input-term-title">Interest Rate</div>
             <div class="input-term-container">
               <input class="mortgage-term-input js-mortgage-rate">
-              <div class="years">%</div>
+              <div class="years rate">%</div>
             </div>
+            <p class="error-rate" >This field is required</p>
           </div>
         </div>
 
@@ -73,6 +75,7 @@
             Calculate Repayments
           </button>
         </div>
+        <p class="error-type">This field is required</p>
         
         
         

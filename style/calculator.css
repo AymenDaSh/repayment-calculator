@@ -81,7 +81,7 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
   justify-content: space-between;
 }
 
@@ -131,7 +131,7 @@
   flex-direction: column; /* Arrange elements in a column */
   align-items: flex-start; /* Align all items to the left */
   gap: 10px; /* Add spacing between elements */
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .title-section4{
@@ -161,6 +161,7 @@
 
   box-sizing: border-box; /* Include padding and border in the width */
 
+  position: abo; /* for error handling*/
 }
 
 .checkmark{
@@ -198,7 +199,7 @@
   cursor: pointer;
   gap: 10px;
 
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .btn-calculate:active{

@@ -1,0 +1,33 @@
+
+.error-term,
+.error-amount,
+.error-rate,
+.error-type{
+  color: hsl(4, 69%, 50%);
+  font-size: 13px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  display: none;
+}
+
+.error-type{
+  position: relative;
+  bottom: 75px;
+}
+
+.error-activated{
+  display: inline;
+}
+
+
+
+.error-signe{   /* .currency,.years */
+  background-color: hsl(4, 69%, 50%);
+  color: white;
+  border-color: hsl(4, 69%, 50%);
+}
+
+.error-input{         /*  */
+  border-color: hsl(4, 69%, 50%);
+}
+
