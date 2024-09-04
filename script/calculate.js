@@ -1,6 +1,6 @@
 //default page
 let resultHTML = `
-<img class="empty-img" src="assets/images/illustration-empty.svg">
+<img class="empty-img" src="assets/images/illustration-empty.svg" alt="empty result icon">
 <p class="empty-title">Results shown here</p>
 <p class="empty-text">
   Complete the form and click "calculate repayments"

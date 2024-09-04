@@ -87,19 +87,19 @@
 
 .input-term-container{
   display: flex;
+  margin-top: 5px;
 }
 
 .input-term-title{
   color:  hsl(200, 24%, 40%);
   font-size: 13px;
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 .mortgage-term-input{
   font-family: Plus Jakarta Sans;
   font-weight: 700;
   width: 100%;
-
   border: 1px solid;
   border-right: none;
   border-radius: 4px 0px 0px 4px;
