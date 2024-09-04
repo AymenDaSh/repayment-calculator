@@ -55,6 +55,12 @@ document.querySelector(".js-clear-link").addEventListener("click", () => {
   `;
   resultContainerHTML.innerHTML = resultHTML;
   resultContainerHTML.classList.add("result-container-empty");  
+
+  document.querySelector(".checkbox-repayments").classList.remove("checkmark-checked")
+  document.querySelector(".checkbox-interest-only").classList.remove("checkmark-checked")
+
+  document.querySelector(".checkmark-repayments").classList.remove("checkmark-checked")
+  document.querySelector(".checkmark-interest-only").classList.remove("checkmark-checked")
   
   document.querySelector(".error-type").classList.remove("error-activated")
 

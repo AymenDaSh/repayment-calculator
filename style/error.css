@@ -8,6 +8,9 @@
   margin-top: 8px;
   margin-bottom: 0px;
   display: none;
+
+  opacity: 0;
+  transition: opacity 0.3s ease, display 0s linear 0.3s;
 }
 
 .error-type{
@@ -17,6 +20,8 @@
 
 .error-activated{
   display: inline;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 
@@ -25,9 +30,12 @@
   background-color: hsl(4, 69%, 50%);
   color: white;
   border-color: hsl(4, 69%, 50%);
+
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .error-input{         /*  */
   border-color: hsl(4, 69%, 50%);
+  transition: border-color 0.3s ease;
 }
 

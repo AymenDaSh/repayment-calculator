@@ -75,6 +75,16 @@
   padding: 10px 10px 10px 10px;
 }
 
+.input-container:hover .currency{
+  background-color: hsl(61, 70%, 52%); /* Lighten the background color */
+  border-color: hsl(61, 70%, 52%); /* Change the border color on hover */
+  color: rgb(40, 73, 93);
+  font-weight: 700;
+}
+.input-container:hover .mortgage-amount-input{
+  border-color: hsl(61, 70%, 52%);
+}
+
 /* Section 3 */
 
 .section3{
@@ -117,6 +127,16 @@
   border-left: none; /* Remove the right border */
   border-radius: 0px 4px 4px 0px; /* Rounded left corners */
   border-color: rgb(138, 138, 138);
+}
+
+.input-term-container:hover .years{
+  background-color: hsl(61, 70%, 52%); /* Lighten the background color */
+  border-color: hsl(61, 70%, 52%); /* Change the border color on hover */
+  color: rgb(40, 73, 93);
+  font-weight: 700;
+}
+.input-term-container:hover .mortgage-term-input{
+  border-color: hsl(61, 70%, 52%);
 }
 
 .input-term-title{
